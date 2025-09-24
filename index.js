@@ -86,7 +86,7 @@ if (johnBMI > markBMI) {
     console.log('John has a lower BMI than Mark SURPRISINGLY!!!')
 } else {
     console.log('both have similar BMI\'s ')
-} */
+} 
 
 let Mike,John, mikeAverageScore, johnAverageScore, highestAverageScore, maryAverageScore;
 mikeAverageScore = (116 + 94 + 123)/3;
@@ -102,4 +102,92 @@ if (mikeAverageScore > johnAverageScore && mikeAverageScore > maryAverageScore) 
 }
 else {
     console.log('Both teams have similar average scores')
-};
+}; */
+
+
+// PRACTICING FUNCTIONS
+/*
+function calculateAge (birthYear) {
+    return 2025 - birthYear;
+}
+
+console.log(calculateAge(1999));
+*/
+
+// ARRAYS CODING CHALLENGE
+
+// Define a variable to store the first name
+/*
+var firstName = 'john';
+
+// Function to calculate the tip based on the bill amount
+function tipCalculator(bill) {
+    let percentage; // Variable to store the calculated tip
+
+    // If the bill is less than 50, tip is 20% of the bill
+    if (bill < 50) {
+        percentage = 0.2 * bill;
+    // If the bill is between 50 and 200 (exclusive), tip is 15% of the bill
+    } else if (bill > 50 && bill < 200) {
+        percentage = 0.15 * bill;
+    // If the bill is 200 or more, tip is 10% of the bill
+    } else  {
+        percentage = 0.1 * bill;
+    };
+    // Return the calculated tip
+    return percentage;
+}
+
+// Example usage: Calculate the tip for a bill of 300 and log it
+console.log(tipCalculator(300));
+
+// Array of bill amounts for which tips need to be calculated
+let tips = [48, 124, 268];
+
+// Calculate the tips for each bill using the tipCalculator function
+let billedTips = [
+    tipCalculator(tips[0]), // Tip for the first bill (48)
+    tipCalculator(tips[1]), // Tip for the second bill (124)
+    tipCalculator(tips[2])  // Tip for the third bill (268)
+];
+
+// Calculate the final values (bill + tip) for each bill
+let finalValues = [
+    tips[0] + billedTips[0], // Total for first bill
+    tips[1] + billedTips[1], // Total for second bill
+    tips[2] + billedTips[2]  // Total for third bill
+];
+
+// Log the array of final values (total amounts to be paid)
+console.log(finalValues);
+*/
+
+
+// CODING CHALLENGE
+
+let mark = {
+    fullName : 'Mark Ochieng',
+    mass: 85, // in kg
+    height: 1.90, // in meters  
+    calBMI: function() {
+        this.bmi = this.mass / (this.height * this.height);
+        return this.bmi;    
+    }
+}
+let john = {
+    fullName : 'John Oduor',
+    mass: 95, // in kg
+    height: 1.88, // in meters
+    calBMI: function() {
+        this.bmi = this.mass / (this.height * this.height);
+        return this.bmi;    
+    }
+}
+if (mark.calBMI() > john.calBMI()) {
+    console.log(mark.fullName + ' has a higher F\'N BMI of ' + mark.bmi);
+} else if (john.calBMI() > mark.calBMI()) {
+    console.log(john.fullName + ' has a higher F\'N BMI of ' + john.bmi);
+} else {
+    console.log('Both have similar BMI\'s');
+}
+
