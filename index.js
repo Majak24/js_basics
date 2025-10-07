@@ -183,6 +183,10 @@ let john = {
         return this.bmi;    
     }
 }
+//console.log(calBMI);
+//mark.calBMI();
+//john.calBMI();
+console.log(mark.calBMI(), john.calBMI());
 if (mark.calBMI() > john.calBMI()) {
     console.log(mark.fullName + ' has a higher F\'N BMI of ' + mark.bmi);
 } else if (john.calBMI() > mark.calBMI()) {
